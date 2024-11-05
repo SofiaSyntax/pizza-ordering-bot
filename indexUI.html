@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzabot UI</title>
+    <link rel="stylesheet" href="pizzabotUI.css">
+</head>
+<body>
+
+    <!-- Text for the user -->
+    <h1>Pizzeria Sofia</h1>
+    <h3>Because of our long queue-times you<br> 
+        can only order multiples of the same<br>
+         type of pizza.</h3>
+    <h4>Place your order here:</h4>
+
+    <div class="formContainer">
+    <form id="pizzaForm" onsubmit="return false;">
+       
+        <!-- Dropdown menu for pizza types -->
+        <div class="dropdown">
+            <label for="pizzaType">Type of pizza:</label>
+        <select id="pizzaType" name="pizzaType"><br>
+            <option value="">Choose a pizza</option>
+            <option value="vegetarian pizza">Vegetarian Pizza</option>
+            <option value="hawaiian pizza">Hawaiian Pizza</option>
+            <option value="pepperoni pizza">Pepperoni Pizza</option>
+        </select>
+        </div>
+
+        <!-- Input for quantity of pizza -->
+        <div class="numOfPizzas">
+            <label for="pizzaQuantity">Number of pizzas:</label>
+            <input id="pizzaQuantity" type="number" name="pizzaQuantity" min="1"><br>
+        </div>
+            <div class="orderBtn">
+            <input id="btn" type="button" onclick="placeOrder()" value="Submit">
+        </div>
+
+    </form>
+</div>
+
+<!--Display oder summary here: -->
+<div id="orderResponse"></div>
+    
+<script src="pizzabotUI.js"></script> 
+</body>
+</html>
